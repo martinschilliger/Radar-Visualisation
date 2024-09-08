@@ -9,7 +9,7 @@ I still prepare the [default rendering styles](/styles) in QGIS, as it is freely
 ## 🚀 TLDR;
 
 1. Make sure git and Docker is installed. We will use [GDAL Docker images](https://github.com/OSGeo/gdal/tree/master/docker).
-1. Pull this repo `git pull https://github.com/martinschilliger/Radar-Visualisation` and move into it `cd Radar-Visualisation`
+1. Pull this repo `git clone https://github.com/martinschilliger/Radar-Visualisation.git` and move into it `cd Radar-Visualisation`
 1. Pull the GDAL container: `docker pull ghcr.io/osgeo/gdal:alpine-normal-latest`
 1. Supply a NetCDF file like the [MeteoSwiss example file](examples/CPC2335513304_00060.001.h5) (I have found it here https://github.com/MeteoSwiss/publication-opendata?tab=readme-ov-file#2623-combiprecip-data). Naming is up to you.
 1. Edit the script to your needs and make it executable: `chmod +x render.sh`
@@ -24,7 +24,7 @@ First we will install the basics and print the information of your file.
 ### Preparing
 
 1. Make sure git and Docker is installed. Tested only in my mac, but should also work on Windows (in a bash console) and naturally in Linux. If you use Windows and plan to regulary work with containers and scripts, maybe you want to [install WSL from Microsoft](https://learn.microsoft.com/en-us/windows/wsl/install). As the rendering of XYZ tiles creates many files, solo windows will be really slow to work with.
-1. Open a terminal window where you want to work with that data. Should be local as there will be many files written. Pull this repo `git pull https://github.com/martinschilliger/Radar-Visualisation`. It will create a folder, move into it `cd Radar-Visualisation`.
+1. Open a terminal window where you want to work with that data. Should be local as there will be many files written. Pull this repo `git clone https://github.com/martinschilliger/Radar-Visualisation.git`. It will create a folder, move into it `cd Radar-Visualisation`.
 1. We will use [GDAL Docker images](https://github.com/OSGeo/gdal/tree/master/docker). Pull the right one for you, I used alpine normal `docker pull ghcr.io/osgeo/gdal:alpine-normal-latest`
 
 ### Print the file information
