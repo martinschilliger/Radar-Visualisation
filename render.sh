@@ -10,7 +10,7 @@ set -euo pipefail
 #################################################################
 
 INPUT_FILE=$1
-COLOR_PALETTE=./styles/MeteoSwiss-Website.qml
+COLOR_PALETTE=styles/MeteoSwiss-Website.qml
 TMP_FOLDER=.tmp
 OUTPUT_FOLDERNAME=Rendered
 OUTPUT_FORMAT=PNG
