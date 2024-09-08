@@ -1,4 +1,6 @@
 #!/bin/bash
+
+# fail on error
 set -euo pipefail
 
 #################################################################
@@ -13,8 +15,6 @@ TMP_FOLDER=.tmp
 OUTPUT_FOLDERNAME=Rendered
 OUTPUT_FORMAT=PNG
 OUTPUT_ZOOM=8-10
-
-
 
 #################################################################
 ##
