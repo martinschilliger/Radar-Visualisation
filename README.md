@@ -13,7 +13,7 @@ I still prepare the [default rendering styles](/styles) in QGIS, as it is freely
 1. Pull the GDAL container: `docker pull ghcr.io/osgeo/gdal:alpine-normal-latest`
 1. Supply a NetCDF file like the [MeteoSwiss example file](examples/CPC2335513304_00060.001.h5) (I have found it here https://github.com/MeteoSwiss/publication-opendata?tab=readme-ov-file#2623-combiprecip-data). Naming is up to you.
 1. Edit the script to your needs and make it executable: `chmod +x render.sh`
-1. Run the script 🎉.
+1. Run the script 🎉. `./render.sh examples/CPC2335513304_00060.001.h5`
 
 ## 🔍 Detailed explanation
 
