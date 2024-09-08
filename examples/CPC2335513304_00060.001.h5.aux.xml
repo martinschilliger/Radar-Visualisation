@@ -1,0 +1,66 @@
+<PAMDataset>
+  <Subdataset name="//dataset1/data1/data">
+    <PAMDataset>
+      <Metadata>
+        <MDI key="Conventions">ODIM_H5/V2_3</MDI>
+        <MDI key="dataset1_data1_what_gain">1 </MDI>
+        <MDI key="dataset1_data1_what_nodata">nan </MDI>
+        <MDI key="dataset1_data1_what_offset">0 </MDI>
+        <MDI key="dataset1_data1_what_quantity">ACRR</MDI>
+        <MDI key="dataset1_data1_what_undetect">inf </MDI>
+        <MDI key="dataset1_what_enddate">20231221</MDI>
+        <MDI key="dataset1_what_endtime">133000</MDI>
+        <MDI key="dataset1_what_prodname">CHCPC_00060</MDI>
+        <MDI key="dataset1_what_product">RR</MDI>
+        <MDI key="dataset1_what_startdate">20231221</MDI>
+        <MDI key="dataset1_what_starttime">123000</MDI>
+        <MDI key="how_MeteoSwiss_Diff">0.692809795557889 </MDI>
+        <MDI key="how_MeteoSwiss_Excluded.raingauges">DOL,GSB,SAE</MDI>
+        <MDI key="how_MeteoSwiss_grid_mapping_name">swiss_coordinates</MDI>
+        <MDI key="how_MeteoSwiss_grid_name">combiprecip</MDI>
+        <MDI key="how_MeteoSwiss_long_name">00060-min precipitation raingauge-adjusted</MDI>
+        <MDI key="how_MeteoSwiss_Nr.raingauges.used">99 </MDI>
+        <MDI key="how_MeteoSwiss_PID">CPC233551330</MDI>
+        <MDI key="how_MeteoSwiss_prod_date">2023-12-21 13:38:42 GMT</MDI>
+        <MDI key="how_MeteoSwiss_Qc">4 </MDI>
+        <MDI key="how_MeteoSwiss_Qr">9 </MDI>
+        <MDI key="how_MeteoSwiss_Qw">14 </MDI>
+        <MDI key="how_MeteoSwiss_reprocessed">0 </MDI>
+        <MDI key="how_MeteoSwiss_time">UNLIMITED</MDI>
+        <MDI key="how_MeteoSwiss_time.stamp">2023-12-21 13:30:00 GMT</MDI>
+        <MDI key="how_MeteoSwiss_VERSION">"COMBIPRECIP-V3.9.2_2023-05-24_zuerh250.meteoswiss.ch" </MDI>
+        <MDI key="how_nodes">WMOID:06661,WMOID:06699,WMOID:06768,WMOID:06726,WMOID:06776</MDI>
+        <MDI key="what_date">20231221</MDI>
+        <MDI key="what_object">COMP</MDI>
+        <MDI key="what_source">ORG:215, CTY:644, CMT:MeteoSwiss (Switzerland)</MDI>
+        <MDI key="what_time">133000</MDI>
+        <MDI key="what_version">H5rad 2.3</MDI>
+        <MDI key="where_LL_lat">43.6301 </MDI>
+        <MDI key="where_LL_lon">3.169 </MDI>
+        <MDI key="where_LR_lat">43.6201 </MDI>
+        <MDI key="where_LR_lon">11.9566 </MDI>
+        <MDI key="where_projdef">+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=2600000 +y_0=1200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</MDI>
+        <MDI key="where_UL_lat">49.3767 </MDI>
+        <MDI key="where_UL_lon">2.6896 </MDI>
+        <MDI key="where_UR_lat">49.3654 </MDI>
+        <MDI key="where_UR_lon">12.4634 </MDI>
+        <MDI key="where_xscale">1 </MDI>
+        <MDI key="where_xsize">710 </MDI>
+        <MDI key="where_yscale">1 </MDI>
+        <MDI key="where_ysize">640 </MDI>
+      </Metadata>
+      <PAMRasterBand band="1">
+        <Metadata>
+          <MDI key="dataset1_data1_data_CLASS">IMAGE</MDI>
+          <MDI key="dataset1_data1_data_IMAGE_VERSION">1.2</MDI>
+          <MDI key="dataset1_data1_data_rhdf5-NA.OK">1 </MDI>
+          <MDI key="STATISTICS_MAXIMUM">2.4</MDI>
+          <MDI key="STATISTICS_MEAN">0.026329591124037</MDI>
+          <MDI key="STATISTICS_MINIMUM">0</MDI>
+          <MDI key="STATISTICS_STDDEV">0.097444847156438</MDI>
+          <MDI key="STATISTICS_VALID_PERCENT">76.88</MDI>
+        </Metadata>
+      </PAMRasterBand>
+    </PAMDataset>
+  </Subdataset>
+</PAMDataset>
