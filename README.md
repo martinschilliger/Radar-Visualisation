@@ -6,26 +6,27 @@ They helped me with insights, cleared my mental model of the data and gave me th
 
 I still prepare the [default rendering styles](/styles) in QGIS, as it is freely available and a good visual way to check what you are going to create. GDAL (the library used for rendering) can use many different color palettes, but \*.qml files from QGIS have been the most easy one for me.
 
-## 🚀 TLDR;
+## 🚀 TL;DR
 
 1. Make sure git and Docker is installed. We will use [GDAL Docker images](https://github.com/OSGeo/gdal/tree/master/docker).
-1. Pull this repo `git clone https://github.com/martinschilliger/Radar-Visualisation.git` and move into it `cd Radar-Visualisation`
-1. Pull the GDAL container: `docker pull ghcr.io/osgeo/gdal:alpine-normal-latest`
+1. Pull this repo `git clone https://github.com/martinschilliger/Radar-Visualisation.git` and move into it `cd Radar-Visualisation`.
+1. Pull the GDAL container: `docker pull ghcr.io/osgeo/gdal:alpine-normal-latest`.
 1. Supply a NetCDF file like the [MeteoSwiss example file](examples/CPC2335513304_00060.001.h5) (I have found it here https://github.com/MeteoSwiss/publication-opendata?tab=readme-ov-file#2623-combiprecip-data). Naming is up to you.
 1. Edit the script to your needs and make it executable: `chmod +x render.sh`
-1. Run the script 🎉. `./render.sh examples/CPC2335513304_00060.001.h5`
+1. Run the script: `./render.sh examples/CPC2335513304_00060.001.h5`
+1. 🎉
 
 ## 🔍 Detailed explanation
 
-HDF5/NetCDF is a file standard used all across Europe to exchange data, like rain measurement of radar stations. It has like a coordinate raster with data in it how much rain there was with a defined scale also in this file.
+HDF5/NetCDF is a file standard used all across Europe to exchange data like rain measurement. It is like a coordinate raster with data in it how much rain there was with a defined scale, which is also in this file.
 
 First we will install the basics and print the information of your file.
 
 ### Preparing
 
-1. Make sure git and Docker is installed. Tested only in my mac, but should also work on Windows (in a bash console) and naturally in Linux. If you use Windows and plan to regulary work with containers and scripts, maybe you want to [install WSL from Microsoft](https://learn.microsoft.com/en-us/windows/wsl/install). As the rendering of XYZ tiles creates many files, solo windows will be really slow to work with.
+1. Make sure `git` and `Docker` is installed. Tested only in Ubunut, but should also work on Windows (in a bash console) and macOS. If you use Windows and plan to regulary work with containers and scripts, maybe you want to [install WSL from Microsoft](https://learn.microsoft.com/en-us/windows/wsl/install). As the rendering of XYZ tiles creates many files, solo windows will be really slow to work with.
 1. Open a terminal window where you want to work with that data. Should be local as there will be many files written. Pull this repo `git clone https://github.com/martinschilliger/Radar-Visualisation.git`. It will create a folder, move into it `cd Radar-Visualisation`.
-1. We will use [GDAL Docker images](https://github.com/OSGeo/gdal/tree/master/docker). Pull the right one for you, I used alpine normal `docker pull ghcr.io/osgeo/gdal:alpine-normal-latest`
+1. We will use [GDAL Docker images](https://github.com/OSGeo/gdal/tree/master/docker). Pull the right one for you, I used alpine normal `docker pull ghcr.io/osgeo/gdal:alpine-normal-latest`.
 
 ### Print the file information
 
@@ -201,20 +202,20 @@ Band 1 Block=710x640 Type=Float64, ColorInterp=Undefined
 
 <summary>Explanation of this command</summary>
 
-- `docker run --rm` This will run the container and remove it afterwards directly again. `ghcr.io/osgeo/gdal:alpine-normal-latest` is the container used
-- `-v .:/home` binds you curent folder (`.`) into the container (as `/home`)
+- `docker run --rm` This will run the container and remove it afterwards directly again. `ghcr.io/osgeo/gdal:alpine-normal-latest` is the container used.
+- `-v .:/home` binds you curent folder (`.`) into the container (as `/home`).
 - `gdalinfo -stats` runs the program (see https://gdal.org/en/latest/programs/index.html#general for all available).
 - `/home/examples/CPC2335513304_00060.001.h5` our supplied file with the path inside the container.
 </details>
 
 ### Make the first rendering
 
-Now here starts the show. Finally.
+Now here starts the show. Finally 🥳.
 
 1. Edit the `render.sh` script with a text editor to your needs, if you want. Defaults should work for first run.
-1. Make the script executable `chmod +x ./render.sh`
-1. Run the script with the file `./render.sh examples/CPC2335513304_00060.001.h5`
-1. Open one of the created files in you favorite browser, for example `openlayers.html`
+1. Make the script executable `chmod +x ./render.sh`.
+1. Run the script with the file `./render.sh examples/CPC2335513304_00060.001.h5`.
+1. Open one of the created files in you favorite browser, for example `openlayers.html`.
 1. Enjoy the data and start playing with settings (`render.sh`) and styles `/styles`. The easiest way for editing styles is QGIS (see below).
 
 ## 🎨 Styles
@@ -240,6 +241,6 @@ Same data, but the idea here was to only have radar data visible in the map, if 
 For visualizing only one data file, the most easy way is to just use QGIS. As it can be overwhelming on first start, here's a quick how to:
 
 1. Open a new project
-2. Drag'n'drop the _.h5 or _.nc file into the window. It will be added as a layer. And also visualized, but as it doesn't contain color only grayscale.
+2. Drag'n'drop the `*.h5` or `*.nc` file into the window. It will be added as a layer. And also visualized, but as it doesn't contain color only grayscale.
 3. Double click the layer and move to the symbolization panel. At the bottom of the window you can import styles, use one here in the repo. After importing the style you could change it if you want or just close the panel, you will see the data visualized on a white background.
 4. Export the data only or add some background layer to make it easily visible. Head over to the Browser panel, there you find «OpenStreetMap» under «XYZ Tiles». Use it with drag'n'drop, just make sure it is below your data layer.
