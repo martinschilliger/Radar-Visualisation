@@ -236,6 +236,13 @@ Same data, but the idea here was to only have radar data visible in the map, if 
 
 ![MeteoSwiss-Website-Intense](styles/MeteoSwiss-Website-Intense.png)
 
+
+### styles/Vedur.is.qml
+
+Same data, but the idea here was to only have radar data visible in the map, if there is a chance of damages (like flooded cellars).
+
+![MeteoSwiss-Website-Intense](styles/Vedur.is.png)
+
 ## 🗺 QGIS
 
 For visualizing only one data file, the most easy way is to just use QGIS. As it can be overwhelming on first start, here's a quick how to:
