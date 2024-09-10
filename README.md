@@ -239,7 +239,7 @@ Same data, but the idea here was to only have radar data visible in the map, if 
 
 ### styles/Vedur.is.qml
 
-Same data, but the idea here was to only have radar data visible in the map, if there is a chance of damages (like flooded cellars).
+You can use whatever styles you want, for example from the [Icelandic weather service](https://en.vedur.is).
 
 ![MeteoSwiss-Website-Intense](styles/Vedur.is.png)
 
