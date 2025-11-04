@@ -36,7 +36,7 @@ docker run --rm -v .:/home ghcr.io/osgeo/gdal:alpine-normal-latest gdal2tiles --
 
 # if the output folder already exists, delete the old backup and move the existing into a backup folder
 rm -rf ./$OUTPUT_FOLDERNAME
-cp ./$TMP_FOLDER/$OUTPUT_FOLDERNAME -r ./$OUTPUT_FOLDERNAME
+cp -r ./$TMP_FOLDER/$OUTPUT_FOLDERNAME ./$OUTPUT_FOLDERNAME
 
 # remove the tmp folder
 docker run --rm -v .:/home ghcr.io/osgeo/gdal:alpine-normal-latest rm -rf /home/$TMP_FOLDER
